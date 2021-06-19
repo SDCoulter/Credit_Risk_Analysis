@@ -15,14 +15,19 @@ As describe in the overview, we take the same metrics of each model we used duri
 
   - Balanced Accuracy Score of:
 
-    `0.6318837601879046`
+    ```
+    0.6318837601879046
+    ```
 
   - Confusion Matrix of:
+
     ```
     [[   49    38]
     [ 5126 11992]]
     ```
+
   - Classification Report:
+
     ```
                        pre       rec       spe        f1       geo       iba       sup
 
@@ -36,14 +41,19 @@ As describe in the overview, we take the same metrics of each model we used duri
 
   - Balanced Accuracy Score of:
 
-    `0.6392101881060872`
+    ```
+    0.6392101881060872
+    ```
 
   - Confusion Matrix of:
+
     ```
     [[   58    29]
     [ 6646 10472]]
     ```
+
   - Classification Report:
+
     ```
                        pre       rec       spe        f1       geo       iba       sup
 
@@ -60,13 +70,16 @@ As describe in the overview, we take the same metrics of each model we used duri
     ```
     0.5177570695899859
     ```
-    
+
   - Confusion Matrix of:
+
     ```
     [[  50   37]
     [9230 7888]]
     ```
+
   - Classification Report:
+
     ```
                        pre       rec       spe        f1       geo       iba       sup
 
@@ -79,13 +92,20 @@ As describe in the overview, we take the same metrics of each model we used duri
 * **Combination Sampling** - using the `SMOTEENN` sampling and `LogisticRegression` algorithm.
 
   - Balanced Accuracy Score of:
-    `0.6289296203633199`
+
+    ```
+    0.6289296203633199
+    ```
+
   - Confusion Matrix of:
+
     ```
     [[  62   25]
     [7785 9333]]
     ```
+
   - Classification Report:
+
     ```
                        pre       rec       spe        f1       geo       iba       sup
 
@@ -98,13 +118,20 @@ As describe in the overview, we take the same metrics of each model we used duri
 * **Modelling** - using the `BalancedRandomForestClassifier` algorithm.
 
   - Balanced Accuracy Score of:
-    `0.7885466545953005`
+
+    ```
+    0.7885466545953005
+    ```
+
   - Confusion Matrix of:
+
     ```
     [[   71,    30],
     [ 2153, 14951]]
     ```
+
   - Classification Report:
+
     ```
                        pre       rec       spe        f1       geo       iba       sup
 
@@ -117,13 +144,20 @@ As describe in the overview, we take the same metrics of each model we used duri
 * **Modelling** - using the `EasyEnsembleClassifier` algorithm.
 
   - Balanced Accuracy Score of:
-    `0.9316600714093861`
+
+    ```
+    0.9316600714093861
+    ```
+
   - Confusion Matrix of:
+
     ```
     [[   93,     8],
     [  983, 16121]]
     ```
+
   - Classification Report:
+
     ```
                        pre       rec       spe        f1       geo       iba       sup
 
