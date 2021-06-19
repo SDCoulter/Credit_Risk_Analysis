@@ -13,13 +13,13 @@ As describe in the overview, we take the same metrics of each model we used duri
 
 * **Oversampling** - using the `RandomOverSampler` sampling and `LogisticRegression` algorithm. This produced the following result output:
 
-  - Balanced Accuracy Score of:
+  - Balanced Accuracy Score:
 
     ```
     0.6318837601879046
     ```
 
-  - Confusion Matrix of:
+  - Confusion Matrix:
 
     ```
     [[   49    38]
@@ -39,13 +39,13 @@ As describe in the overview, we take the same metrics of each model we used duri
 
 * **Oversampling** - using the `SMOTE` sampling and `LogisticRegression` algorithms.
 
-  - Balanced Accuracy Score of:
+  - Balanced Accuracy Score:
 
     ```
     0.6392101881060872
     ```
 
-  - Confusion Matrix of:
+  - Confusion Matrix:
 
     ```
     [[   58    29]
@@ -65,13 +65,13 @@ As describe in the overview, we take the same metrics of each model we used duri
 
 * **Undersampling** - using the `ClusterCentroids` sampling and `LogisticRegression` algorithm.
 
-  - Balanced Accuracy Score of:
+  - Balanced Accuracy Score:
 
     ```
     0.5177570695899859
     ```
 
-  - Confusion Matrix of:
+  - Confusion Matrix:
 
     ```
     [[  50   37]
@@ -91,13 +91,13 @@ As describe in the overview, we take the same metrics of each model we used duri
 
 * **Combination Sampling** - using the `SMOTEENN` sampling and `LogisticRegression` algorithm.
 
-  - Balanced Accuracy Score of:
+  - Balanced Accuracy Score:
 
     ```
     0.6289296203633199
     ```
 
-  - Confusion Matrix of:
+  - Confusion Matrix:
 
     ```
     [[  62   25]
@@ -117,13 +117,13 @@ As describe in the overview, we take the same metrics of each model we used duri
 
 * **Modelling** - using the `BalancedRandomForestClassifier` algorithm.
 
-  - Balanced Accuracy Score of:
+  - Balanced Accuracy Score:
 
     ```
     0.7885466545953005
     ```
 
-  - Confusion Matrix of:
+  - Confusion Matrix:
 
     ```
     [[   71,    30],
@@ -143,13 +143,13 @@ As describe in the overview, we take the same metrics of each model we used duri
 
 * **Modelling** - using the `EasyEnsembleClassifier` algorithm.
 
-  - Balanced Accuracy Score of:
+  - Balanced Accuracy Score:
 
     ```
     0.9316600714093861
     ```
 
-  - Confusion Matrix of:
+  - Confusion Matrix:
 
     ```
     [[   93,     8],
@@ -167,14 +167,17 @@ As describe in the overview, we take the same metrics of each model we used duri
     avg / total       0.99      0.94      0.92      0.97      0.93      0.87     17205
     ```
 
-<!--
 ## Challenge - Summary
 
-Summarize the results of the machine learning models, and include a recommendation on the model to use, if any. If you do not recommend any of the models, justify your reasoning.
+The first metric, the balanced accuracy score, takes into account that the two classes are weighted heavily in one direction, and produces a value based on the **sensitivity** (true positive rate) and **specificity** (true negative rate), and how well the model predicts them. From the results section we can see, based on the balanced accuracy score, the final model, `EasyEnsembleClassifier`, performs the best with `0.9316600714093861`. This means the model produced true positives and true negatives correctly 93% of the time.
 
-There is a summary of the results (2 pt)
-There is a recommendation on which model to use, or there is no recommendation with a justification (3 pt)
--->
+The second metric, the confusion matrix, gives us a layout of the true positive, false negative, false positive, and true negative. This metric is more a visual aid, as the data is better understood in the third metric, the classification report.
+
+The classification report takes the information shown in the confusion matrix and produces values for the **precision/positive predictive value**, **sensitivity/recall/true positive rate**, **specificity/true negative rate**, and **F1 score/harmonic mean**, as well as others. Depending on the goal of the model, which values are important is a determination to be made by the data scientist.
+
+As we are predicting risk for a bank, we want to reduce the number of defaults on loans to as low as possible. In an example with 20 people, if 2 of them are high-risk applicants we would rather mark 5 of them as high-risk, covering the 2, and only lend to the 15 low-risk. This is a better alternative to loaning to 19 of the 20 and having 1 of the high-risk customers default on the loan. This means we want to have high sensitivity/recall for high-risk customers - we want to catch as many of the positive high-risk cases as possible, and we favour that over catching ***just*** high-risk cases. While precision can still be important, it is not our focus when choosing a good model.
+
+All the models we looked at had low precision in catching high risk customers, which we know is okay, so we can put that statistic aside and concentrate on recall/sensitivity. The `EasyEnsembleClassifier` model produced the best recall value for high-risk, with 92%, a good margin above the same metric from the other models. For this reason, I would recommend this model from the six for a bank looking to predict high risk versus low risk for credit applications.
 
 ## Context
 
