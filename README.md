@@ -14,7 +14,9 @@ As describe in the overview, we take the same metrics of each model we used duri
 * **Oversampling** - using the `RandomOverSampler` sampling and `LogisticRegression` algorithm. This produced the following result output:
 
   - Balanced Accuracy Score of:
+
     `0.6318837601879046`
+    
   - Confusion Matrix of:
     ```
     [[   49    38]
