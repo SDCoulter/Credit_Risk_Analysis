@@ -9,17 +9,12 @@ For oversampling we use the `RandomOverSampler` and `SMOTE` algorithms, and for 
 
 ## Challenge - Results
 
-<!--
-Using bulleted lists, describe the balanced accuracy scores and the precision and recall scores of all six machine learning models. Use screenshots of your outputs to support your results.
-
-There is a bulleted list that describes the balanced accuracy score and the precision and recall scores of all six machine learning models (15 pt)
--->
-
 As describe in the overview, we take the same metrics of each model we used during the challenge: `balanced_accuracy_score`, `confusion_matrix`, and `classification_report`. This allows us to compare each sampling and modelling technique we worked on.
 
 * **Oversampling** - using the `RandomOverSampler` sampling and `LogisticRegression` algorithm. This produced the following result output:
 
-  - Balanced Accuracy Score of: `0.6318837601879046`
+  - Balanced Accuracy Score of:
+    `0.6318837601879046`
   - Confusion Matrix of:
     ```
     [[   49    38]
@@ -37,7 +32,8 @@ As describe in the overview, we take the same metrics of each model we used duri
 
 * **Oversampling** - using the `SMOTE` sampling and `LogisticRegression` algorithms.
 
-  - Balanced Accuracy Score of: `0.6392101881060872`
+  - Balanced Accuracy Score of:
+    `0.6392101881060872`
   - Confusion Matrix of:
     ```
     [[   58    29]
@@ -55,7 +51,8 @@ As describe in the overview, we take the same metrics of each model we used duri
 
 * **Undersampling** - using the `ClusterCentroids` sampling and `LogisticRegression` algorithm.
 
-  - Balanced Accuracy Score of: `0.5177570695899859`
+  - Balanced Accuracy Score of:
+    `0.5177570695899859`
   - Confusion Matrix of:
     ```
     [[  50   37]
@@ -73,7 +70,8 @@ As describe in the overview, we take the same metrics of each model we used duri
 
 * **Combination Sampling** - using the `SMOTEENN` sampling and `LogisticRegression` algorithm.
 
-  - Balanced Accuracy Score of: `0.6289296203633199`
+  - Balanced Accuracy Score of:
+    `0.6289296203633199`
   - Confusion Matrix of:
     ```
     [[  62   25]
@@ -91,7 +89,8 @@ As describe in the overview, we take the same metrics of each model we used duri
 
 * **Modelling** - using the `BalancedRandomForestClassifier` algorithm.
 
-  - Balanced Accuracy Score of: `0.7885466545953005`
+  - Balanced Accuracy Score of:
+    `0.7885466545953005`
   - Confusion Matrix of:
     ```
     [[   71,    30],
@@ -109,7 +108,8 @@ As describe in the overview, we take the same metrics of each model we used duri
 
 * **Modelling** - using the `EasyEnsembleClassifier` algorithm.
 
-  - Balanced Accuracy Score of: `0.9316600714093861`
+  - Balanced Accuracy Score of:
+    `0.9316600714093861`
   - Confusion Matrix of:
     ```
     [[   93,     8],
