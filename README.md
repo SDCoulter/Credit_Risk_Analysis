@@ -16,7 +16,7 @@ As describe in the overview, we take the same metrics of each model we used duri
   - Balanced Accuracy Score of:
 
     `0.6318837601879046`
-    
+
   - Confusion Matrix of:
     ```
     [[   49    38]
@@ -35,7 +35,9 @@ As describe in the overview, we take the same metrics of each model we used duri
 * **Oversampling** - using the `SMOTE` sampling and `LogisticRegression` algorithms.
 
   - Balanced Accuracy Score of:
+
     `0.6392101881060872`
+
   - Confusion Matrix of:
     ```
     [[   58    29]
@@ -54,7 +56,11 @@ As describe in the overview, we take the same metrics of each model we used duri
 * **Undersampling** - using the `ClusterCentroids` sampling and `LogisticRegression` algorithm.
 
   - Balanced Accuracy Score of:
-    `0.5177570695899859`
+
+    ```
+    0.5177570695899859
+    ```
+    
   - Confusion Matrix of:
     ```
     [[  50   37]
